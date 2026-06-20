@@ -4,7 +4,7 @@ import { ArrowRight, HardHat } from 'lucide-react';
 
 const slides = [
   {
-    image: 'https://images.unsplash.com/photo-1541888081639-6501f2f01fbd?auto=format&fit=crop&q=80&w=2070', // Industrial/Printing
+    image: 'https://images.unsplash.com/photo-1541888081639-6501f2f01fbd?auto=format&fit=crop&q=80&w=2070', // Industrial
     title: 'Transforming Ideas Into Impactful Infrastructure & Branding Solutions',
   },
   {
@@ -12,8 +12,16 @@ const slides = [
     title: 'Excellence in Fabrication, Signage & Maintenance',
   },
   {
-    image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=80&w=2071', // Bridge/Infrastructure
-    title: 'Delivering Durable, High-Quality Infrastructure Solutions',
+    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2070', // Civil/Architecture
+    title: 'Delivering Durable, High-Quality Civil Infrastructure',
+  },
+  {
+    image: 'https://images.unsplash.com/photo-1562408590-e32931084e23?auto=format&fit=crop&q=80&w=2070', // Printing/Branding
+    title: 'State-of-the-Art Printing & Corporate Branding Services',
+  },
+  {
+    image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=80&w=2071', // Engineering/Drafting
+    title: 'Expert Manpower & End-to-End Project Execution',
   }
 ];
 
