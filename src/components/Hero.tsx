@@ -4,7 +4,7 @@ import { ArrowRight, HardHat } from 'lucide-react';
 
 const slides = [
   {
-    image: 'https://images.unsplash.com/photo-1541888081639-6501f2f01fbd?auto=format&fit=crop&q=80&w=2070', // Industrial
+    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=2070', // Industrial
     title: 'Transforming Ideas Into Impactful Infrastructure & Branding Solutions',
   },
   {
