@@ -73,7 +73,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-2xl md:text-6xl lg:text-7xl font-bold text-white mb-4 md:mb-6 leading-tight max-w-5xl mx-auto text-shadow-md"
+          className="text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-4 md:mb-6 leading-tight max-w-4xl mx-auto text-shadow-md"
         >
           {slides[currentSlide].title}
         </motion.h1>
@@ -82,7 +82,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="text-[13px] md:text-xl text-gray-200 mb-6 md:mb-10 max-w-3xl mx-auto font-light leading-relaxed md:leading-normal"
+          className="text-[13px] md:text-lg text-gray-200 mb-6 md:mb-10 max-w-2xl mx-auto font-light leading-relaxed md:leading-normal"
         >
           From industrial painting and fabrication to signage, branding, maintenance, and manpower solutions, Varan Corporation delivers excellence across every project.
         </motion.p>
