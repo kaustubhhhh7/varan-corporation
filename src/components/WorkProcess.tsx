@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { motion } from 'framer-motion';
 import { MessageSquare, MapPin, PenTool, Hammer, CheckSquare, Flag } from 'lucide-react';
 

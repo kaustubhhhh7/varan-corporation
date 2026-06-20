@@ -1,14 +1,11 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { 
   Printer, 
   Hammer, 
   Paintbrush, 
-  Wrench, 
   Users, 
   Zap,
-  Building,
-  Image as ImageIcon
+  Building
 } from 'lucide-react';
 
 const services = [

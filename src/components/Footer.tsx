@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Phone, Mail, MapPin, ChevronRight, MessageCircle } from 'lucide-react';
 
 const Footer = () => {

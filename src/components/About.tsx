@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { motion } from 'framer-motion';
 import { CheckCircle2 } from 'lucide-react';
 
@@ -73,7 +73,7 @@ const About = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4 mb-8 md:mb-10">
               {features.map((feature, index) => (
                 <div key={index} className="flex items-center gap-3">
-                  <CheckCircle2 className="text-primary-red shrink-0" size={20} className="md:w-6 md:h-6 text-primary-red" />
+                  <CheckCircle2 size={20} className="shrink-0 md:w-6 md:h-6 text-primary-red" />
                   <span className="text-dark font-medium text-sm md:text-base">{feature}</span>
                 </div>
               ))}

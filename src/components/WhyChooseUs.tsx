@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { motion } from 'framer-motion';
 import { Award, ShieldCheck, Clock, Settings, ThumbsUp, Truck, HardHat, BadgeIndianRupee } from 'lucide-react';
 

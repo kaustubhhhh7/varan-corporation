@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const categories = ['All', 'Printing & Branding', 'Fabrication', 'Painting', 'Civil & Beautification'];

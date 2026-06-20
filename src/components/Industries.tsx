@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { motion } from 'framer-motion';
 import { Building2, Landmark, Train, Factory, ShoppingBag, Briefcase } from 'lucide-react';
 
