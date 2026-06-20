@@ -15,7 +15,7 @@ const services = [
     icon: <Printer className="w-5 h-5 md:w-8 md:h-8" />,
     description: 'High-quality advertising displays, board banners, outdoor branding, and signage solutions.',
     features: ['Advertising Displays', 'Board Banners', 'Outdoor Branding', 'Sign Boards', 'ACP Signage', 'Acrylic Letter Signage', 'Display Fabrication'],
-    color: 'bg-blue-50 text-primary-blue border-blue-100',
+    color: 'bg-slate-50 text-primary-blue border-slate-100',
     iconBg: 'bg-primary-blue text-white'
   },
   {
@@ -24,7 +24,7 @@ const services = [
     icon: <Hammer className="w-5 h-5 md:w-8 md:h-8" />,
     description: 'Precision engineering and fabrication for structural, industrial, and custom display needs.',
     features: ['ACP Fabrication', 'Acrylic Letter Fabrication', 'Industrial Fabrication', 'Structural Fabrication', 'Display Structures', 'Metal Fabrication', 'Custom Fabrication'],
-    color: 'bg-red-50 text-primary-red border-red-100',
+    color: 'bg-slate-50 text-primary-red border-slate-100',
     iconBg: 'bg-primary-red text-white'
   },
   {
@@ -33,8 +33,8 @@ const services = [
     icon: <Paintbrush className="w-5 h-5 md:w-8 md:h-8" />,
     description: 'Professional painting solutions for massive infrastructure, industrial structures, and commercial spaces.',
     features: ['Bridge Painting', 'Flyover Painting', 'Metro Painting', 'Gantry Painting', 'Divider Painting', 'Wall Painting', 'Building Painting', 'Industrial Structure Painting'],
-    color: 'bg-cyan-50 text-accent-blue border-cyan-100',
-    iconBg: 'bg-accent-blue text-white'
+    color: 'bg-slate-50 text-slate-700 border-slate-100',
+    iconBg: 'bg-slate-700 text-white'
   },
   {
     id: 'civil',
@@ -42,8 +42,8 @@ const services = [
     icon: <Building className="w-5 h-5 md:w-8 md:h-8" />,
     description: 'Comprehensive civil construction, restoration, and ongoing infrastructure maintenance.',
     features: ['Civil Work', 'Building Maintenance', 'Infrastructure Maintenance', 'Beautification Projects', 'Cleaning Services', 'Restoration Work'],
-    color: 'bg-indigo-50 text-indigo-600 border-indigo-100',
-    iconBg: 'bg-indigo-600 text-white'
+    color: 'bg-slate-50 text-zinc-700 border-slate-100',
+    iconBg: 'bg-zinc-700 text-white'
   },
   {
     id: 'workforce',
@@ -51,8 +51,8 @@ const services = [
     icon: <Users className="w-5 h-5 md:w-8 md:h-8" />,
     description: 'Reliable supply of skilled labor, security personnel, and dedicated project teams.',
     features: ['Manpower Supply', 'Skilled Labour', 'Security Guards', 'Maintenance Teams', 'Project Workforce'],
-    color: 'bg-emerald-50 text-emerald-600 border-emerald-100',
-    iconBg: 'bg-emerald-600 text-white'
+    color: 'bg-slate-50 text-stone-700 border-slate-100',
+    iconBg: 'bg-stone-700 text-white'
   },
   {
     id: 'technical',
@@ -60,8 +60,8 @@ const services = [
     icon: <Zap className="w-5 h-5 md:w-8 md:h-8" />,
     description: 'Specialized electrical works and renewable energy installations for modern infrastructure.',
     features: ['Solar System Installation', 'Electrical Work', 'System Maintenance', 'Technical Support'],
-    color: 'bg-orange-50 text-orange-600 border-orange-100',
-    iconBg: 'bg-orange-600 text-white'
+    color: 'bg-slate-50 text-neutral-700 border-slate-100',
+    iconBg: 'bg-neutral-700 text-white'
   }
 ];
 
@@ -111,10 +111,10 @@ const Services = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
-              className="group bg-white rounded-xl md:rounded-2xl p-4 md:p-6 lg:p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 relative overflow-hidden"
+              className="group bg-white rounded-xl md:rounded-2xl p-4 md:p-6 lg:p-8 shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 relative overflow-hidden"
             >
-              {/* Hover Background Effect */}
-              <div className={`absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-300 ${service.color.split(' ')[0]}`} />
+              {/* Subtle Permanent Color Tint & Hover Effect */}
+              <div className={`absolute inset-0 opacity-40 group-hover:opacity-100 transition-opacity duration-300 ${service.color.split(' ')[0]}`} />
               
               <div className="relative z-10">
                 <div className="flex items-center gap-3 md:block mb-3 md:mb-6">

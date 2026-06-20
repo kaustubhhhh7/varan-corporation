@@ -8,37 +8,37 @@ const projects = [
     id: 1,
     title: 'Corporate ACP Signage',
     category: 'Printing & Branding',
-    image: 'https://images.unsplash.com/photo-1541888081639-6501f2070500?auto=format&fit=crop&q=80&w=800'
+    image: 'https://images.unsplash.com/photo-1629219857214-02b302d42272?auto=format&fit=crop&q=80&w=800'
   },
   {
     id: 2,
     title: 'Metro Bridge Painting',
     category: 'Painting',
-    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=800'
+    image: 'https://images.unsplash.com/photo-1547895749-888a559fc2a7?auto=format&fit=crop&q=80&w=800'
   },
   {
     id: 3,
     title: 'Industrial Shed Fabrication',
     category: 'Fabrication',
-    image: 'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&q=80&w=800'
+    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=800'
   },
   {
     id: 4,
-    title: 'Public Park Beautification',
-    category: 'Civil & Beautification',
-    image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=80&w=800'
+    title: 'Large Format Digital Print',
+    category: 'Printing & Branding',
+    image: 'https://images.unsplash.com/photo-1581079289196-67865ea83118?auto=format&fit=crop&q=80&w=800'
   },
   {
     id: 5,
-    title: 'Acrylic Letter Signage',
+    title: 'Commercial Offset Printing',
     category: 'Printing & Branding',
-    image: 'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&q=80&w=800'
+    image: 'https://images.unsplash.com/photo-1503694978374-8a2fa686963a?auto=format&fit=crop&q=80&w=800'
   },
   {
     id: 6,
     title: 'Highway Divider Painting',
     category: 'Painting',
-    image: 'https://images.unsplash.com/photo-1517581177682-a085bb7ffb15?auto=format&fit=crop&q=80&w=800'
+    image: 'https://images.unsplash.com/photo-1544475982-9a3b42fff446?auto=format&fit=crop&q=80&w=800'
   }
 ];
 
@@ -100,7 +100,7 @@ const Portfolio = () => {
         {/* Projects Grid */}
         <motion.div layout className="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-8">
           <AnimatePresence mode="popLayout">
-            {filteredProjects.map((project) => (
+            {filteredProjects.map((project, index) => (
               <motion.div
                 key={project.id}
                 layout
@@ -108,7 +108,11 @@ const Portfolio = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.8 }}
                 transition={{ duration: 0.3 }}
-                className="group relative rounded-xl md:rounded-2xl overflow-hidden aspect-square md:aspect-[4/3] bg-gray-100 cursor-pointer shadow-sm hover:shadow-xl transition-shadow"
+                className={`group relative rounded-xl md:rounded-2xl overflow-hidden bg-gray-100 cursor-pointer shadow-sm hover:shadow-xl transition-shadow ${
+                  index % 3 === 0 
+                    ? 'col-span-2 aspect-[16/9] md:col-span-1 md:aspect-[4/3]' 
+                    : 'col-span-1 aspect-square md:col-span-1 md:aspect-[4/3]'
+                }`}
               >
                 <img 
                   src={project.image} 
@@ -117,12 +121,12 @@ const Portfolio = () => {
                 />
                 
                 {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-primary-blue/90 via-primary-blue/30 to-transparent opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3 md:p-8">
+                <div className="absolute inset-0 bg-gradient-to-t from-primary-blue/90 via-primary-blue/30 to-transparent opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4 md:p-8">
                   <div className="transform translate-y-0 md:translate-y-8 group-hover:translate-y-0 transition-transform duration-300">
-                    <span className="text-accent-blue font-medium text-[9px] md:text-sm mb-1 md:mb-2 block uppercase tracking-wider">
+                    <span className="text-accent-blue font-medium text-[10px] md:text-sm mb-1.5 md:mb-2 block uppercase tracking-wider">
                       {project.category}
                     </span>
-                    <h3 className="text-sm md:text-2xl font-bold text-white leading-tight">
+                    <h3 className={`font-bold text-white leading-tight ${index % 3 === 0 ? 'text-lg md:text-2xl' : 'text-sm md:text-2xl'}`}>
                       {project.title}
                     </h3>
                   </div>

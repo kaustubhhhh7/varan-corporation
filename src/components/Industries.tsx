@@ -3,12 +3,12 @@ import { motion } from 'framer-motion';
 import { Building2, Landmark, Train, Factory, ShoppingBag, Briefcase } from 'lucide-react';
 
 const industries = [
-  { name: 'Infrastructure', icon: <Building2 size={40} /> },
-  { name: 'Government Projects', icon: <Landmark size={40} /> },
-  { name: 'Metro Rail', icon: <Train size={40} /> },
-  { name: 'Manufacturing Units', icon: <Factory size={40} /> },
-  { name: 'Retail Businesses', icon: <ShoppingBag size={40} /> },
-  { name: 'Corporate Offices', icon: <Briefcase size={40} /> },
+  { name: 'Infrastructure', icon: <Building2 size={24} />, color: 'from-blue-500/10 to-blue-500/5', iconColor: 'text-blue-600', borderColor: 'group-hover:border-blue-500' },
+  { name: 'Government Projects', icon: <Landmark size={24} />, color: 'from-indigo-500/10 to-indigo-500/5', iconColor: 'text-indigo-600', borderColor: 'group-hover:border-indigo-500' },
+  { name: 'Metro Rail', icon: <Train size={24} />, color: 'from-primary-red/10 to-primary-red/5', iconColor: 'text-primary-red', borderColor: 'group-hover:border-primary-red' },
+  { name: 'Manufacturing Units', icon: <Factory size={24} />, color: 'from-amber-500/10 to-amber-500/5', iconColor: 'text-amber-600', borderColor: 'group-hover:border-amber-500' },
+  { name: 'Retail Businesses', icon: <ShoppingBag size={24} />, color: 'from-emerald-500/10 to-emerald-500/5', iconColor: 'text-emerald-600', borderColor: 'group-hover:border-emerald-500' },
+  { name: 'Corporate Offices', icon: <Briefcase size={24} />, color: 'from-cyan-500/10 to-cyan-500/5', iconColor: 'text-cyan-600', borderColor: 'group-hover:border-cyan-500' },
 ];
 
 const Industries = () => {
@@ -39,7 +39,7 @@ const Industries = () => {
           </motion.h2>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6">
           {industries.map((industry, index) => (
             <motion.div
               key={index}
@@ -47,14 +47,24 @@ const Industries = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.4 }}
-              className="bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-lg hover:-translate-y-2 transition-all duration-300 border border-gray-100 group cursor-pointer"
+              className={`relative overflow-hidden bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-gray-100 ${industry.borderColor} group cursor-pointer`}
             >
-              <div className="text-gray-400 group-hover:text-primary-red flex justify-center mb-4 transition-colors">
+              {/* Hover Gradient Background */}
+              <div className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-br ${industry.color}`} />
+              
+              {/* Unique Watermark Element */}
+              <div className="absolute -right-6 -bottom-6 opacity-[0.03] group-hover:opacity-10 transition-all duration-500 transform group-hover:scale-110 group-hover:-rotate-12 pointer-events-none [&>svg]:w-28 [&>svg]:h-28 text-gray-900">
                 {industry.icon}
               </div>
-              <h3 className="text-sm font-semibold text-dark group-hover:text-primary-blue transition-colors">
-                {industry.name}
-              </h3>
+
+              <div className="relative z-10 flex flex-col items-center">
+                <div className={`w-14 h-14 md:w-16 md:h-16 rounded-full bg-gray-50 flex items-center justify-center mb-4 group-hover:bg-white group-hover:shadow-md transition-all duration-300 ${industry.iconColor} [&>svg]:w-6 [&>svg]:h-6 md:[&>svg]:w-7 md:[&>svg]:h-7`}>
+                  {industry.icon}
+                </div>
+                <h3 className="text-xs md:text-sm font-bold text-dark group-hover:text-primary-blue transition-colors leading-tight">
+                  {industry.name}
+                </h3>
+              </div>
             </motion.div>
           ))}
         </div>

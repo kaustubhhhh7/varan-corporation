@@ -84,7 +84,7 @@ const WhyChooseUs = () => {
           </motion.h2>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6">
           {reasons.map((reason, index) => (
             <motion.div
               key={index}
@@ -92,15 +92,15 @@ const WhyChooseUs = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
-              className="bg-white/10 backdrop-blur-md border border-white/20 p-8 rounded-2xl hover:bg-white/20 hover:-translate-y-1 transition-all duration-300 group"
+              className="bg-white/10 backdrop-blur-md border border-white/20 p-4 md:p-6 lg:p-8 rounded-xl md:rounded-2xl hover:bg-white/20 hover:-translate-y-1 transition-all duration-300 group flex flex-col items-center md:items-start text-center md:text-left"
             >
-              <div className="w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center text-white mb-6 group-hover:scale-110 group-hover:bg-primary-red transition-all duration-300">
+              <div className="w-10 h-10 md:w-14 md:h-14 bg-white/20 rounded-lg md:rounded-xl flex items-center justify-center text-white mb-3 md:mb-6 group-hover:scale-110 group-hover:bg-primary-red transition-all duration-300 [&>svg]:w-5 [&>svg]:h-5 md:[&>svg]:w-7 md:[&>svg]:h-7">
                 {reason.icon}
               </div>
-              <h3 className="text-xl font-bold text-white mb-3">
+              <h3 className="text-sm md:text-xl font-bold text-white mb-1.5 md:mb-3 leading-tight">
                 {reason.title}
               </h3>
-              <p className="text-gray-300 text-sm leading-relaxed">
+              <p className="text-gray-300 text-[11px] md:text-sm leading-snug md:leading-relaxed">
                 {reason.description}
               </p>
             </motion.div>
